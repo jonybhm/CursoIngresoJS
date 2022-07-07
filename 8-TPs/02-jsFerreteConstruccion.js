@@ -22,15 +22,15 @@ function Rectangulo ()
 	let rectangulo;
 	let alambre;
 
-	document.getElementById('txtIdLargo').value;
-	document.getElementById('txtIdAncho').value;
+	largo=document.getElementById('txtIdLargo').value;
+	ancho=document.getElementById('txtIdAncho').value;
 
 	largo=parseFloat(largo);
 	ancho=parseFloat(ancho);
 
 	rectangulo=2*largo+2*ancho;
 	rectangulo=parseFloat(rectangulo);
-	
+
 	alambre=rectangulo*3;
 	alambre=parseFloat(alambre);
 
@@ -39,11 +39,53 @@ function Rectangulo ()
 }
 function Circulo () 
 {
+	let radio;
+	let circunferencia;
+	let alambre;
+
+	radio=document.getElementById('txtIdRadio').value;
 	
+	radio=parseFloat(radio);
+	
+	circunferencia=2*Math.PI*radio;
+	circunferencia=parseFloat(circunferencia);
+	
+	alambre=circunferencia*3;
+	alambre=parseFloat(alambre);
+
+	alert("la circunferencia del terreno es " + circunferencia + " metros, y el total de alambre a utilizar es " + alambre + " metros");
 }
 function Materiales () 
 {
+	let cemento;
+	let cal;
+	let material;
+
+	let largo;
+	let ancho;
+	let areaUno;
 	
+	let radio;
+	let areaDos;
+
+	largo=document.getElementById('txtIdLargo').value;
+	ancho=document.getElementById('txtIdAncho').value;
+
+	largo=parseFloat(largo);
+	ancho=parseFloat(ancho);
+
+	areaUno=largo*ancho;
+	areaUno=parseFloat(areaUno);
+
+	radio=document.getElementById('txtIdRadio').value;
+	
+	radio=parseFloat(radio);
+	
+	areaDos=Math.PI*radio*radio;
+	areaDos=parseFloat(areaDos);
+
+	
+
 }
 
 //txtIdLargo
