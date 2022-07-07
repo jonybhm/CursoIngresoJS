@@ -12,7 +12,9 @@ function mostrarAumento()
 	sueldo=document.getElementById('txtIdSueldo').value;
 	sueldo=parseInt(sueldo);
 	porcentaje=prompt("ingrese el porcentaje de aumento");
+	porcentaje=parseFloat(porcentaje);
 	resultado=(sueldo*porcentaje/100)+sueldo;
+
 	document.getElementById('txtIdResultado').value=resultado;
 }
 
