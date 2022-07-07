@@ -6,10 +6,13 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 	let sueldo;
+	let porcentaje;
+	let resultado;
+
 	sueldo=document.getElementById('txtIdSueldo').value;
 	sueldo=parseInt(sueldo);
-	let resultado;
-	resultado=sueldo*1.1;
+	porcentaje=prompt("ingrese el porcentaje de aumento");
+	resultado=(sueldo*porcentaje/100)+sueldo;
 	document.getElementById('txtIdResultado').value=resultado;
 }
 

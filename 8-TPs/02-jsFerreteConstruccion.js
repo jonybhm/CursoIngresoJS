@@ -29,7 +29,7 @@ function Rectangulo ()
 	ancho=parseFloat(ancho);
 
 	rectangulo=2*largo+2*ancho;
-	rectangulo=parseFloat(rectangulo);
+	rectangulo=parseFloat(rectangulo).toFixed(2);
 
 	alambre=rectangulo*3;
 	alambre=parseFloat(alambre);
@@ -48,7 +48,7 @@ function Circulo ()
 	radio=parseFloat(radio);
 	
 	circunferencia=2*Math.PI*radio;
-	circunferencia=parseFloat(circunferencia);
+	circunferencia=parseFloat(circunferencia).toFixed(2);
 	
 	alambre=circunferencia*3;
 	alambre=parseFloat(alambre);
@@ -57,17 +57,15 @@ function Circulo ()
 }
 function Materiales () 
 {
-	let cemento;
-	let cal;
-	let material;
+	let cementoUno;
+	let calUno;
+	let cementoDos;
+	let calDos;
 
 	let largo;
 	let ancho;
 	let areaUno;
 	
-	let radio;
-	let areaDos;
-
 	largo=document.getElementById('txtIdLargo').value;
 	ancho=document.getElementById('txtIdAncho').value;
 
@@ -75,17 +73,24 @@ function Materiales ()
 	ancho=parseFloat(ancho);
 
 	areaUno=largo*ancho;
-	areaUno=parseFloat(areaUno);
+	areaUno=parseFloat(areaUno).toFixed(2);
+
+	let radio;
+	let areaDos;
 
 	radio=document.getElementById('txtIdRadio').value;
-	
 	radio=parseFloat(radio);
 	
 	areaDos=Math.PI*radio*radio;
-	areaDos=parseFloat(areaDos);
+	areaDos=parseFloat(areaDos).toFixed(2);
 
-	
+	cementoUno=areaUno*2;
+	calUno=areaUno*3;
+	cementoDos=areaDos*2;
+	calDos=areaDos*3;
 
+	alert("En caso de tener un terreno rectangular de " + areaUno + " metros cuadrados, necesitará " + cementoUno + " bolsas de cemento y " + calUno + " bolsas de cal ");
+	alert("En caso de tener un terreno circular de " + areaDos + " metros cuadrados, necesitará " + cementoDos + " bolsas de cemento y " + calDos + " bolsas de cal ");
 }
 
 //txtIdLargo

@@ -6,13 +6,17 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	let importe;
-	importe=document.getElementById('txtIdImporte').value;
-	importe=parseInt(importe);
+	let porcentaje;
 	let resultado;
-	resultado=importe*0.75;
+
+	importe=document.getElementById('txtIdImporte').value;
+	importe=parseFloat(importe);
+	porcentaje=prompt("ingrese el porcentaje de descuento");
+	resultado=importe-(importe*porcentaje/100);
+	
 	document.getElementById('txtIdResultado').value=resultado;
 }
 
 
 //txtIdImporte
-//txtIdResultado
+//txtIdResultadoy
