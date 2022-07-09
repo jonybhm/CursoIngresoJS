@@ -1,17 +1,27 @@
 /*
-Debemos lograr tomar Los numeros por ID ,
-transformarlos a enteros (parseInt) y Sumarlos.
-mostrar el resulto por medio de "ALERT"*/
+Ingresar valor de dolar oficial y dolar blue por ID
+y mostrar la diferencia porcentual entre ambos 
+*/
 function sumar()
 {
-	let numeroUno;
-	numeroUno=document.getElementById('txtIdNumeroUno').value;
-	numeroUno=parseInt (numeroUno);
-	let numeroDos;
-	numeroDos=document.getElementById('txtIdNumeroDos').value;
-	numeroDos=parseInt (numeroDos);
-	let suma;
-	suma=numeroUno+numeroDos;
-	alert ("la suma es " + suma);
+	let mensaje;
+	let dolarOficial;
+	let dolarBlue;
+	let diferencia;
+	let porcentajeDiferencia;
+	
+	dolarOficial=document.getElementById('txtIdNumeroUno').value;
+	dolarBlue=document.getElementById('txtIdNumeroDos').value;
+	
+	dolarOficial=parseInt (dolarOficial);
+	dolarBlue=parseInt (dolarBlue);
+
+	diferencia=(dolarBlue/dolarOficial)*100;
+	
+	porcentajeDiferencia=diferencia-100;
+	
+	mensaje="la diferecia porcentual es de " + porcentajeDiferencia + "%";
+	
+	alert (mensaje);
 }
 

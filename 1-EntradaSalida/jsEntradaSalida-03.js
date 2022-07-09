@@ -5,9 +5,11 @@ el botón  'mostrar'
 */
 function mostrar()
 {
+	let mensaje;
 	let nombreIngresado;
 	nombreIngresado=document.getElementById('txtIdNombre').value;//el id es: txtIdNombre
-	alert("su nombre: " + nombreIngresado);
+	mensaje="su nombre: " + nombreIngresado;
+	alert(mensaje);
 
 }
 

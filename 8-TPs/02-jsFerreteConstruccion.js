@@ -17,6 +17,7 @@ cada uno para las medidas que nos ingresen.
 
 function Rectangulo () 
 {
+	let mensaje;
 	let largo;
 	let ancho;
 	let rectangulo;
@@ -34,11 +35,17 @@ function Rectangulo ()
 	alambre=rectangulo*3;
 	alambre=parseFloat(alambre);
 
-	alert("el perimetro del terreno es " + rectangulo + " metros, y el total de alambre a utilizar es " + alambre + " metros");
+	mensaje="el perimetro del terreno es " + rectangulo;
+	mensaje+=" metros, y el total de alambre a utilizar es ";
+	mensaje+=alambre + " metros";
+
+	alert(mensaje);
 
 }
+
 function Circulo () 
 {
+	let mensaje;
 	let radio;
 	let circunferencia;
 	let alambre;
@@ -48,15 +55,21 @@ function Circulo ()
 	radio=parseFloat(radio);
 	
 	circunferencia=2*Math.PI*radio;
-	circunferencia=parseFloat(circunferencia).toFixed(2);
-	
+		
 	alambre=circunferencia*3;
-	alambre=parseFloat(alambre);
+	
+	mensaje= "la circunferencia del terreno es " + circunferencia;
+	mensaje+= " metros, y el total de alambre a utilizar es "; 
+	mensaje+= alambre + " metros";
 
-	alert("la circunferencia del terreno es " + circunferencia + " metros, y el total de alambre a utilizar es " + alambre + " metros");
+	alert(mensaje);
 }
+
 function Materiales () 
 {
+	let mensajeUno;
+	let mensajeDos;
+
 	let cementoUno;
 	let calUno;
 	let cementoDos;
@@ -65,6 +78,9 @@ function Materiales ()
 	let largo;
 	let ancho;
 	let areaUno;
+	
+	let radio;
+	let areaDos;
 	
 	largo=document.getElementById('txtIdLargo').value;
 	ancho=document.getElementById('txtIdAncho').value;
@@ -75,9 +91,6 @@ function Materiales ()
 	areaUno=largo*ancho;
 	areaUno=parseFloat(areaUno).toFixed(2);
 
-	let radio;
-	let areaDos;
-
 	radio=document.getElementById('txtIdRadio').value;
 	radio=parseFloat(radio);
 	
@@ -86,11 +99,20 @@ function Materiales ()
 
 	cementoUno=areaUno*2;
 	calUno=areaUno*3;
+	
 	cementoDos=areaDos*2;
 	calDos=areaDos*3;
 
-	alert("En caso de tener un terreno rectangular de " + areaUno + " metros cuadrados, necesitará " + cementoUno + " bolsas de cemento y " + calUno + " bolsas de cal ");
-	alert("En caso de tener un terreno circular de " + areaDos + " metros cuadrados, necesitará " + cementoDos + " bolsas de cemento y " + calDos + " bolsas de cal ");
+	mensajeUno= "En caso de tener un terreno rectangular de " + areaUno; 
+	mensajeUno+= " metros cuadrados, necesitará " + cementoUno;
+	mensajeUno+= " bolsas de cemento y " + calUno + " bolsas de cal ";
+	
+	mensajeDos="En caso de tener un terreno circular de " + areaDos;
+	mensajeDos+= " metros cuadrados, necesitará " + cementoDos;
+	mensajeDos+= " bolsas de cemento y " + calDos + " bolsas de cal ";
+
+	alert(mensajeUno);
+	alert(mensajeDos);
 }
 
 //txtIdLargo

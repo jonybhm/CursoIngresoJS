@@ -7,63 +7,80 @@ ej.: "la Resta es 750"*/
 
 function sumar()
 {	
+	let mensaje;
 	let numeroUno;
 	let numeroDos;
+	
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
+	
 	numeroUno=parseInt(numeroUno);
 	numeroDos=parseInt(numeroDos);
+	
 	let suma;
 	suma=numeroUno+numeroDos;
-	alert("la suma es " + suma);	
+	
+	mensaje="la suma es " + suma;
+
+	alert(mensaje);	
 }
 
 function restar()
 {
+	let mensaje;
 	let numeroUno;
 	let numeroDos;
+	let resta;
+	
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
+	
 	numeroUno=parseInt(numeroUno);
 	numeroDos=parseInt(numeroDos);
-	let resta;
+	
 	resta=numeroUno-numeroDos;
-	alert("la resta es " + resta);
+	
+	mensaje="la resta es " + resta;
+
+	alert(mensaje);
 }
 
 function multiplicar()
 { 
+	let mensaje;
 	let numeroUno;
 	let numeroDos;
+	let producto;
+	
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
+	
 	numeroUno=parseInt(numeroUno);
 	numeroDos=parseInt(numeroDos);
-	let producto;
+	
 	producto=numeroUno*numeroDos;
-	alert("el producto es " + producto);
+	
+	mensaje="el producto es " + producto;
+
+	alert(mensaje);
 }
 
 function dividir()
 {
+	let mensaje;
 	let numeroUno;
 	let numeroDos;
-	numeroUno=document.getElementById('txtIdNumeroUno').value;
-	numeroDos=document.getElementById('txtIdNumeroDos').value;
-	numeroUno=parseInt(numeroUno);
-	numeroDos=parseInt(numeroDos);
 	let division;
-	division=numeroUno/numeroDos;
-	alert("la division es " + division);
-}
-
-
-
-/*
-let numeroUno;
-	let numeroDos;
+	
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
+	
 	numeroUno=parseInt(numeroUno);
 	numeroDos=parseInt(numeroDos);
-*/
+	
+	division=numeroUno/numeroDos;
+	
+	mensaje="la division es " + division;
+
+	alert(mensaje);
+}
