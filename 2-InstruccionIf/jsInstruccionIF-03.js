@@ -9,24 +9,22 @@ function mostrar()
 	//tomo la edad  txtIdEdad
 
 	let edad;
-	let mensajeTrue;
-	let mensajeFalse;
+	let mensaje;
 
 	edad=document.getElementById('txtIdEdad').value;
 
 	edad=parseInt(edad);
 
-	mensajeTrue="Usted es mayor de edad";
-	mensajeFalse="Usted es menor de edad";
-
+	
 	if(edad>17)
 	{
-		alert(mensajeTrue);
+		mensaje="Usted es mayor de edad";
+		alert(mensaje);
 	}else
 	{
-		alert(mensajeFalse);
+		mensaje="Usted es menor de edad";
+		alert(mensaje);
 	}
 
 
-
-}//FIN DE LA FUNCIÓN
+}

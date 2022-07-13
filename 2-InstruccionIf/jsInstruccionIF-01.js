@@ -8,23 +8,21 @@ function mostrar()
 	//tomo la edad  id: txtIdEdad
 	
 	let edad;
-	let mensajeTrue;
-	let mensajeFalse;
-	
+	let mensaje;
+
 	edad=document.getElementById('txtIdEdad').value;
 
 	edad=parseInt(edad);
 
-	mensajeTrue="niña bonita";
-	mensajeFalse="numero disntinto de 15";
-	
 	if(edad==15)
 	{
+		mensaje="niña bonita";
 		alert(mensajeTrue);
 	}else
 	{
+		mensaje="numero disntinto de 15";
 		alert(mensajeFalse);
 	}
 	
 	
-}//FIN DE LA FUNCIÓN
+}

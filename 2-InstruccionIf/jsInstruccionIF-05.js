@@ -7,18 +7,18 @@ function mostrar()
 {
 	//tomo la edad  
 	let edad;
-	let mensajeTrue;
+	let mensaje;
 	
 	edad=document.getElementById("txtIdEdad").value;
 
 	edad=parseInt(edad);
 
-	mensajeTrue="Usted no es adolescente";
+	mensaje="Usted no es adolescente";
 
 	if(edad<13 || edad>17)
 	{
-		alert(mensajeTrue);
+		alert(mensaje);
 	}
 
 
-}//FIN DE LA FUNCIÓN
+}
