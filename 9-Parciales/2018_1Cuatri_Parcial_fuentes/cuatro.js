@@ -24,28 +24,25 @@ function mostrar()
 		alert(mensaje);
 	}else
 	{
+		numeroUno=parseFloat(numeroUno);
+		numeroDos=parseFloat(numeroDos);
+
 		if(numeroUno>numeroDos)
 		{
-			numeroUno=parseFloat(numeroUno);
-			numeroDos=parseFloat(numeroDos);
-			
 			resultado=numeroUno-numeroDos;
 			
 			alert(resultado);
 		}else
 		{
-			numeroUno=parseFloat(numeroUno);
-			numeroDos=parseFloat(numeroDos);
-			
 			resultado=numeroUno+numeroDos;
 			
 			alert(resultado);
 
 			if(resultado>10)
 			{
-				alert("la suma es "+ resultado +" y supero el 10")
+				mensaje="la suma es "+ resultado +" y supero el 10";
+				alert(mensaje);
 			}
 		}
 	}
-	
 }
