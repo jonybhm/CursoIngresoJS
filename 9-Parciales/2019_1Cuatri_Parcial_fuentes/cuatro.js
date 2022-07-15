@@ -17,20 +17,25 @@ function mostrar()
 	numeroUno=prompt("ingrese el primer numero");
 	numeroDos=prompt("ingrese el segundo numero");
 
+	numeroUno=parseFloat(numeroUno);
+	numeroDos=parseFloat(numeroDos);
+		
+
 	if (numeroUno==numeroDos)
 	{
+		
+		numeroUno=numeroUno.toString();
+		numeroDos=numeroDos.toString();
+
 		resultado=numeroUno+numeroDos;
-		alert(resultado);
+		
 	}else
 	{
-		numeroUno=parseFloat(numeroUno);
-		numeroDos=parseFloat(numeroDos);
 		
 		if(numeroUno>numeroDos)
 		{
 			resultado=numeroUno-numeroDos;
-			alert(resultado);
-
+			
 			if(resultado>10)
 			{
 				alert("la resta es "+resultado+" y superó el 10");
@@ -38,7 +43,9 @@ function mostrar()
 		}else
 		{
 			resultado=numeroUno+numeroDos;
-			alert(resultado);
+			
 		}
 	}
+
+	alert(resultado);
 }
