@@ -17,18 +17,18 @@ function mostrar()
 	if(numeroRandom==9 || numeroRandom==10)
 	{
 		mensaje=numeroRandom+" EXCELENTE";
-		alert(mensaje);
+		
 	}else
 	{
 		if(numeroRandom<4)
 		{
 			mensaje=numeroRandom+" Vamos, la próxima se puede";
-			alert(mensaje);	
+			
 		}else
 		{
 			mensaje=numeroRandom+" APROBADO";
-			alert(mensaje);
+			
 		}
-		
 	}
+	alert(mensaje);
 }//FIN DE LA FUNCIÓN
