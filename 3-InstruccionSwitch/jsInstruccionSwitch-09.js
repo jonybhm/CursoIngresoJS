@@ -102,6 +102,6 @@ function mostrar()
 	}
 
 	precioFinal=precioBase-precioBase*descuento+precioBase*aumento;
-
-	alert("El precio final es" + precioFinal);
+	mensaje="El precio final es" + precioFinal;
+	alert(mensaje);
 }//FIN DE LA FUNCIÓN

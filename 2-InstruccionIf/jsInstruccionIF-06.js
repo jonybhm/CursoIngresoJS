@@ -18,18 +18,19 @@ function mostrar()
 	if(edad>17)
 	{
 		mensaje="Usted es mayor de edad";
-		alert(mensaje);
+		
 	}else
 	{
 		if(edad<13)
 		{
 			mensaje="Usted es menor de edad";
-			alert(mensaje);
+			
 		}else
 		{
 			mensaje="Usted es adolescente";
-			alert(mensaje);
+			
 		}
 	}
+	alert(mensaje);
 
 }
