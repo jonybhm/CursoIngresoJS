@@ -12,7 +12,8 @@ function mostrar()
 		claveIngresada = prompt("ERROR!! ingrese la clave correcta!!");
 	}*/
 
-	do{
+	do
+	{
 		claveIngresada=prompt("ingrese la clave correcta");
 	}while(claveIngresada!="utn750");
 	

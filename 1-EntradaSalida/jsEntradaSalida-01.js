@@ -3,6 +3,22 @@ Jonathan De Castro 1°G
 La juguetería El MUNDO DE OCTAVIO nos encarga un programa para conocer qué
 cantidad de materiales se necesita para la fabricación de distintos juguetes.
 */
+
+
+
+function mostrar()
+{
+let numeroIngresado;
+let letra;
+
+numeroIngresado=100;
+
+letra=String(numeroIngresado).charAt(0);
+
+alert(letra);
+}
+
+/*
 function mostrar()
 {
 	let mensaje;
@@ -52,6 +68,7 @@ function mostrar()
 	alert(mensajeDos);
 
 }
+*/
 
 
 
