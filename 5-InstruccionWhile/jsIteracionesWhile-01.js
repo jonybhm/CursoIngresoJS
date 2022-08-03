@@ -14,3 +14,27 @@ function mostrar()
 	}
 
 }//FIN DE LA FUNCIÓN
+
+//validaciones while
+
+let edad;
+
+edad=prompt("ingrese su edad");
+
+edad=parseInt(edad);
+
+while(isNaN(edad) || !(edad>18 && edad<65))
+{
+	edad=prompt("ingrese un valor correcto");
+	edad=parseInt(edad);
+} 
+
+let division;
+
+division=prompt("ingrese su division");
+
+while(!isNaN(division))
+{
+	division=prompt("ingrese un valor correcto");
+	
+} 

@@ -23,7 +23,7 @@ function mostrar()
 
 		contador++;
 
-		respuesta=prompt("quiere continuar? s/n")
+		respuesta=prompt("quiere continuar? s/n").toLowerCase();
 	}while(respuesta=='s');
 	
 	document.getElementById("txtIdSuma").value=acumulador;

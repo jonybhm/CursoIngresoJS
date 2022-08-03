@@ -1,3 +1,111 @@
+/*
+
+1)De 5  personas que ingresan a la farmacia se deben tomar y validar los siguientes datos.
+nombre, numero de espera(del 0 al 99),DNI(validar entre 10.000.000 a 99.999.999) 
+y monto de la factura emitida (validar que no sea negativo):
+a)informar el promedio gastado por persona.
+b)La cantidad de personas que su DNI es menor a 80.000.000 
+y la cantidad de personas que su DNI es igual o mayor a los 80.000.000
+c)el nombre y numero de espera del que más gastó
+pedir datos por prompt y mostrar por document.write
+
+*/
+
+function mostrar()
+{
+    let contador=0;
+
+    let nombre;
+    let numeroEspera;
+    let DNI;
+    let montoFactura;
+
+    let promedioGastado;
+    let acumuladorGastado=0;
+
+    let contadorPersonasDNImenor=0;
+    let contadorPersonasDNImayoroigual=0;
+
+    let flagPrimerIngreso=true;
+    let nombreQuienMasGasto;
+    let numeroQuienMasGasto;
+    let montoQuienMasGasto;
+
+    let mensaje;
+
+    while(contador<2)
+    {
+        do
+        {
+            nombre=prompt("Ingrese el nombre").toUpperCase();
+                    
+        }while(!isNaN(nombre));
+    
+        do
+        {
+            numeroEspera=prompt("Ingrese el numero de espera");
+
+            numeroEspera=parseInt(numeroEspera);
+
+        }while(isNaN(numeroEspera) || numeroEspera<0 || numeroEspera>99);
+
+        do
+        {
+            DNI=prompt("Ingrese el DNI");
+
+            DNI=parseInt(DNI);
+
+        }while(isNaN(DNI) || DNI<10000000 || DNI>99999999);
+
+        do
+        {
+            montoFactura=prompt("Ingrese el monto de la factura");
+
+            montoFactura=parseInt(montoFactura);
+
+        }while(isNaN(montoFactura) || montoFactura<0);
+
+        if(DNI<80000000)
+        {
+            contadorPersonasDNImenor++;
+        }else
+        {
+            contadorPersonasDNImayoroigual++;
+        }
+
+        if(flagPrimerIngreso)
+        {
+            flagPrimerIngreso=false;
+            nombreQuienMasGasto=nombre;
+            numeroQuienMasGasto=numeroEspera;
+            montoQuienMasGasto=montoFactura;
+        }else
+        {
+            if(montoQuienMasGasto<montoFactura)
+            {
+                nombreQuienMasGasto=nombre;
+                numeroQuienMasGasto=numeroEspera;
+                montoQuienMasGasto=montoFactura;
+            }
+        }
+
+        contador++;
+        acumuladorGastado=acumuladorGastado+montoFactura;
+
+    }
+
+    promedioGastado=acumuladorGastado/contador;   
+
+    mensaje=" a)el promedio gastado por persona: "+promedioGastado;
+    mensaje+="b)La cantidad de personas que su DNI es menor a 80.000.000 es: "+contadorPersonasDNImenor;
+    mensaje+="y la cantidad de personas que su DNI es igual o mayor a los 80.000.000: "+contadorPersonasDNImayoroigual;
+    mensaje+="c)el nombre del que más gastó es :"+nombreQuienMasGasto+" y numero de espera: "+numeroQuienMasGasto;
+
+    document.write(mensaje);
+
+}
+
+
 /*Realizar el algoritmo que permita ingresar 5 paises:
 del continente (validar entre america , asia , europa ,africa y oceania)
 el nombre del país,
@@ -9,7 +117,7 @@ b)El nombre del pais con menos habitantes
 c)la cantidad de paises de america que tienen menos de 0 grados .
 d)el promedio de habitantes entre los paises ingresados .
 e) la temperatura mínima ingresada, y nombre del pais que registro esa temperatura.
-*/
+
 
 function mostrar()
 {
@@ -37,7 +145,7 @@ function mostrar()
 
 	let contador=0;
 
-	while(contador<2)
+	while(contador<2) 
 	{
 	
 	do
@@ -124,6 +232,7 @@ function mostrar()
 	alert(mensaje);
 
 }
+*/
 
 
 
